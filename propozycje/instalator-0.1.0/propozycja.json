@@ -1,0 +1,16 @@
+{
+  "schema": "linkorder.propozycja/v1",
+  "subject": "instalator-0.1.0",
+  "kind": "installer",
+  "version": "0.1.0",
+  "git_commit": "4052ce7c987cc5485c36c26f104dea3b9212b35b",
+  "created_at": "2026-10-18T21:09:04Z",
+  "base": {
+    "root": 1,
+    "targets": 1,
+    "releases": 1
+  },
+  "role": "targets",
+  "meta_version": 2,
+  "payload_sha256": "4036bde356d88077c0e2f6e1230c2ad90639febad5d46e8a72eadcc5476317b4"
+}
