@@ -1,0 +1,43 @@
+{
+	"signatures": [
+		{
+			"keyid": "abb98a03ef2842baeb38e6590b0d52b7e9edce6943c3d12d1db2114d2a744cb1",
+			"sig": "3044022015811f36367552d8039ab929371e3e1a6f1c3362f1e68eabb1a558fc80551f990220392b140f194b11bdb5907decf5c21b4de7308c206e4a9b5e5f24d491cada3435"
+		},
+		{
+			"keyid": "b7cf28a5a374cb7db6818ffda181bee067f0457203b409d64c3f6929fb42b043",
+			"sig": "30460221008538cf90b737ea18a21eb6e4d10cf3efdbb13356c4141656bc293aa09ca593d6022100cf7ea8d593497f771c05602caa5285e8dc19e31c16f734e533f4b46c2bf7358a"
+		}
+	],
+	"signed": {
+		"_type": "targets",
+		"delegations": {
+			"keys": {
+				"356b29c8cc2cfbb126975ce5b283c3ef8ea71c4314006554c7e8913b27cb6079": {
+					"keytype": "ecdsa",
+					"keyval": {
+						"public": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEMg8lLPXgknzihtaMEnLxi1gP0w3Y\nltWZo6PGK3GuMbQeYqReNflzS23rTjnU5IxjIMne72HmI8h17d/AUIQFKg==\n-----END PUBLIC KEY-----\n"
+					},
+					"scheme": "ecdsa-sha2-nistp256"
+				}
+			},
+			"roles": [
+				{
+					"keyids": [
+						"356b29c8cc2cfbb126975ce5b283c3ef8ea71c4314006554c7e8913b27cb6079"
+					],
+					"name": "releases",
+					"paths": [
+						"releases/*/*"
+					],
+					"terminating": true,
+					"threshold": 1
+				}
+			]
+		},
+		"expires": "2027-10-18T18:55:17Z",
+		"spec_version": "1.0.31",
+		"targets": {},
+		"version": 1
+	}
+}
