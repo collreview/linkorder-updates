@@ -1,0 +1,50 @@
+{
+	"signatures": [
+		{
+			"keyid": "abb98a03ef2842baeb38e6590b0d52b7e9edce6943c3d12d1db2114d2a744cb1",
+			"sig": "3045022100a9835f77c7db8b6124d871cc95d322e0832a41bc35c4589521d3af7b54e16074022033c62afb53e5d818fffac50e7a70c32b97e2fc2207ef55266251ec9512a337e1"
+		},
+		{
+			"keyid": "b7cf28a5a374cb7db6818ffda181bee067f0457203b409d64c3f6929fb42b043",
+			"sig": "3046022100abcb5bccad89341cd4943c648f85f16d4e6130dd888af80deda86d12c45b92ff022100cda556db9dcab4c307fd01e2ce0e0991c830bd5b9fe83deb820208329f09efff"
+		}
+	],
+	"signed": {
+		"_type": "targets",
+		"delegations": {
+			"keys": {
+				"356b29c8cc2cfbb126975ce5b283c3ef8ea71c4314006554c7e8913b27cb6079": {
+					"keytype": "ecdsa",
+					"keyval": {
+						"public": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEMg8lLPXgknzihtaMEnLxi1gP0w3Y\nltWZo6PGK3GuMbQeYqReNflzS23rTjnU5IxjIMne72HmI8h17d/AUIQFKg==\n-----END PUBLIC KEY-----\n"
+					},
+					"scheme": "ecdsa-sha2-nistp256"
+				}
+			},
+			"roles": [
+				{
+					"keyids": [
+						"356b29c8cc2cfbb126975ce5b283c3ef8ea71c4314006554c7e8913b27cb6079"
+					],
+					"name": "releases",
+					"paths": [
+						"releases/*/*"
+					],
+					"terminating": true,
+					"threshold": 1
+				}
+			]
+		},
+		"expires": "2027-10-18T21:09:04Z",
+		"spec_version": "1.0.31",
+		"targets": {
+			"installer/0.1.0/linkorder-linux-amd64": {
+				"hashes": {
+					"sha256": "653d8a94a917788267e16a7d1ddd9fff8a755c1d40e55ff5e64658656bb48a54"
+				},
+				"length": 13394044
+			}
+		},
+		"version": 2
+	}
+}

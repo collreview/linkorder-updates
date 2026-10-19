@@ -1,0 +1,53 @@
+{
+  "mediaType": "application/vnd.dev.sigstore.bundle.v0.3+json",
+  "verificationMaterial": {
+    "publicKey": {
+      "hint": "b7cf28a5a374cb7db6818ffda181bee067f0457203b409d64c3f6929fb42b043"
+    },
+    "tlogEntries": [
+      {
+        "logIndex": "159893534",
+        "logId": {
+          "keyId": "zxGZFVvd0FEmjR8WrFwMdcAJ9vtaY/QXf44Y1wUeP6A="
+        },
+        "kindVersion": {
+          "kind": "hashedrekord",
+          "version": "0.0.2"
+        },
+        "inclusionProof": {
+          "logIndex": "159893534",
+          "rootHash": "RselC5W0SBhWlWxze9L2v+4CpO1qzl/5Wj/oHCiixhI=",
+          "treeSize": "159893545",
+          "hashes": [
+            "+LU2WWe41XYB4pAyxJy1YULPBExCFu08CuqIHsnQTv4=",
+            "2fAOUjoYW/NKHSdgFExn3RaJrCQ8zc6DqA8t0yCViyE=",
+            "XIhHozG6hQwHqXl94MdDXzAIliHSYhmSvLSPcHlRiZY=",
+            "doI9o5M6szmTnHPePAbE5LmS/dBGF2h01TW9ghqmis0=",
+            "ZdYP5X5VxvvXJl9HU0XjzUZ+WSsvvmpJjIVDfpqIBE0=",
+            "GswRwd0v42T9LZ+sAvtL38wgFsTDAphlmh1gmNkywjc=",
+            "VdE4pOHc5BfR02KWf2eiCc88aB50f88OulaBuR7PLkE=",
+            "KN2cuYkUlJdiCcjSFeSExVG5hZiLHEVdpeEstze0/6g=",
+            "izWLt+z+5PsbiciNruyhO/oKXHohrcFqt/k70xK7rJg=",
+            "K5az0QeCcml7FoLRCfQ6qLqoC7fObfKU7yNyZw2/Si0=",
+            "X1VimtYtQS5GTaKAlEfjER5YmNl3AAnUB9fFIy0lGzo=",
+            "37akyshF9Rz4NXkU/UguDHO2CzuOSLVhhD92NG2hlEY=",
+            "SnTXeQf3YPbX+etJ1AorTnKtAr25uQgdxTrupSgKzNU=",
+            "t+9ruqAHapTBCYxPiwd8o4RaqDWalDgPNfwyc9xqSjY=",
+            "dfIw5UpQDrySuhIKL/XbMVw0ZwWKPJUmYhf45oJW6bQ="
+          ],
+          "checkpoint": {
+            "envelope": "log2025-1.rekor.sigstore.dev\n159893545\nRselC5W0SBhWlWxze9L2v+4CpO1qzl/5Wj/oHCiixhI=\n\n— log2025-1.rekor.sigstore.dev zxGZFfhLxmJwAJuG/iBUYFo5UB2hZPEVi/BR351zGhm8HePE0ckx+mSHSwmj/5W6Iyel0jj6Qy8FGf1JWHV9Rij2VQQ=\n— staging.witness.transparency.goog/ring-any-bells LhqNyQAAAABq1kJ0Sll+C4LhFwJI64FHBUbApIgp6VJxwnLLOl94Imhaty2dtc2Uz1V3SseNZDAe8uvgyNmQ8ya2Sx/NxJPPXx/3AA==\n— krabbel.ct.ipng.ch SxDb2AAAAABq1kJ0TM8WqYlfwNtsefWjv/PtuN4rFHe5bXXBAiHTfDWblLS7OtGYoVjWaZQzVIm0LmV0veyHSdOw3YJcfvCaXyrTAA==\n— witness.navigli.sunlight.geomys.org o+AP4gAAAABq1kJ0BArNHyfrcl1k5l/DzO2XLP/Sf/MzFKXfBw4CELPkOvIuDeVyDFQl8o3Dp8qsCTaMMoqUgaJ2e/OIobJA33DQDQ==\n— witness.stagemole.eu Z/euoAAAAABq1kJ050b1m4YOVCEnYgDw/SvjLvdEjpjrbDKF0WvWrZQBcCFtRxTDvcC9cz85DxlJSPVuefdezOMFBJL3EQk7Y8DHDg==\n"
+          }
+        },
+        "canonicalizedBody": "eyJhcGlWZXJzaW9uIjoiMC4wLjIiLCJraW5kIjoiaGFzaGVkcmVrb3JkIiwic3BlYyI6eyJoYXNoZWRSZWtvcmRWMDAyIjp7ImRhdGEiOnsiYWxnb3JpdGhtIjoiU0hBMl8yNTYiLCJkaWdlc3QiOiJRRGE5NDFiWWdIZkE0dmJoSXd3cTJRWTUvcnJWMUc2S2N1cmN4VWRqRjdRPSJ9LCJzaWduYXR1cmUiOnsiY29udGVudCI6Ik1FWUNJUUNyeTF2TXJZazBITlNVUEdTUGhmRnRUbUV3M1lpSytBM3RxRzBTeEZ1Uy93SWhBTTJsVnR1ZHlyVERCLzBCNHM0T0NaSElNTDFibitnOTY0SUNDREtmQ2UvLyIsInZlcmlmaWVyIjp7ImtleURldGFpbHMiOiJQS0lYX0VDRFNBX1AyNTZfU0hBXzI1NiIsInB1YmxpY0tleSI6eyJyYXdCeXRlcyI6Ik1Ga3dFd1lIS29aSXpqMENBUVlJS29aSXpqMERBUWNEUWdBRVdpQWptYVRON0h2QUw5OFI5OTVVMHNzV3haOGxYaVJramk1OE1mRFRoTVZaWGV6Smd3Z1BlSWFiVHZRN0x3K1BLVU90VXd6eWJJM3BJZkd0UDNESjFBPT0ifX19fX19"
+      }
+    ]
+  },
+  "messageSignature": {
+    "messageDigest": {
+      "algorithm": "SHA2_256",
+      "digest": "QDa941bYgHfA4vbhIwwq2QY5/rrV1G6KcurcxUdjF7Q="
+    },
+    "signature": "MEYCIQCry1vMrYk0HNSUPGSPhfFtTmEw3YiK+A3tqG0SxFuS/wIhAM2lVtudyrTDB/0B4s4OCZHIML1bn+g964ICCDKfCe//"
+  }
+}
