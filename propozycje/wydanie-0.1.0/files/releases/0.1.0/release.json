@@ -1,0 +1,17 @@
+{
+  "schema": "linkorder.release/v1",
+  "version": "0.1.0",
+  "class": "regular",
+  "min_installer_version": "0.0.0",
+  "released_at": "2026-10-19T17:12:23Z",
+  "git_commit": "4052ce7c987cc5485c36c26f104dea3b9212b35b",
+  "compose": "releases/0.1.0/compose.yaml",
+  "images": {
+    "app": "ghcr.io/collreview/linkorder-app@sha256:f014028bdc462c947bda4c6a54c76d3f593af663cea07605c95e7a88bd658eeb",
+    "edge": "ghcr.io/collreview/linkorder-edge@sha256:8c74263806389b9a29a7bb89bd083f4dd771539e0d08b015e87c235150f0e554",
+    "egress": "ghcr.io/collreview/linkorder-egress@sha256:1e34b1e9305f63589f4dfb50cbdb7d299cc792e9a5991abc2c324d145e74ccd6",
+    "postgres": "ghcr.io/collreview/linkorder-postgres@sha256:cfca4219dc0d0cd877d563655572e6216cd9e24beff94a598a626961cf7ab23f",
+    "valkey": "ghcr.io/collreview/linkorder-valkey@sha256:c5a1b443d6394a3526bd289e45d4f4b0fb36e2c39e689db48586a7ecd773fd84"
+  },
+  "notes_pl": []
+}
