@@ -1,0 +1,64 @@
+{
+	"signatures": [
+		{
+			"keyid": "356b29c8cc2cfbb126975ce5b283c3ef8ea71c4314006554c7e8913b27cb6079",
+			"sig": "3046022100bcaf6bd4b8be897973e03cc3ba3249a5f65af0bce984b6d07f64a31056cbaf9b022100af31e23078c64b6c9b2a0e51be4b75e9a7aed20a72e604514c3bec2ae92533cf"
+		}
+	],
+	"signed": {
+		"_type": "targets",
+		"expires": "2027-01-18T09:23:22Z",
+		"spec_version": "1.0.31",
+		"targets": {
+			"releases/0.1.0/compose.yaml": {
+				"hashes": {
+					"sha256": "016b7d959196638634b54db5dfdf9df117e5a959c555a76a91cebb4d5b6b77b8"
+				},
+				"length": 24013
+			},
+			"releases/0.1.0/profile-m.env": {
+				"hashes": {
+					"sha256": "943c55da17e861657fc1e0e9e99876777e58f95d73023598b3c6f10de38d94fc"
+				},
+				"length": 1034
+			},
+			"releases/0.1.0/profile-s.env": {
+				"hashes": {
+					"sha256": "ba6aca9c954e85da1ea26f9d1b024ab3ac09027a0f542d90f9a9edbcb1161b76"
+				},
+				"length": 849
+			},
+			"releases/0.1.0/release.json": {
+				"hashes": {
+					"sha256": "ea0e205dc073ce0551cd53d8290b272264a64a009e4adca1548a19d6adc53540"
+				},
+				"length": 919
+			},
+			"releases/0.2.0/compose.yaml": {
+				"hashes": {
+					"sha256": "35fd2da0acb27dcffc982b0a773163527179f1f57f8ff742c9b11752b7095a6e"
+				},
+				"length": 24013
+			},
+			"releases/0.2.0/profile-m.env": {
+				"hashes": {
+					"sha256": "943c55da17e861657fc1e0e9e99876777e58f95d73023598b3c6f10de38d94fc"
+				},
+				"length": 1034
+			},
+			"releases/0.2.0/profile-s.env": {
+				"hashes": {
+					"sha256": "ba6aca9c954e85da1ea26f9d1b024ab3ac09027a0f542d90f9a9edbcb1161b76"
+				},
+				"length": 849
+			},
+			"releases/0.2.0/release.json": {
+				"hashes": {
+					"sha256": "ebfaebcf00d090caee29ee1530ccc091d0721dac532328534667cf7dc7a56fb8"
+				},
+				"length": 919
+			}
+		},
+		"version": 3
+	}
+}
