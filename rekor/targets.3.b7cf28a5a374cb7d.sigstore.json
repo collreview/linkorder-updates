@@ -1,0 +1,51 @@
+{
+  "mediaType": "application/vnd.dev.sigstore.bundle.v0.3+json",
+  "verificationMaterial": {
+    "publicKey": {
+      "hint": "b7cf28a5a374cb7db6818ffda181bee067f0457203b409d64c3f6929fb42b043"
+    },
+    "tlogEntries": [
+      {
+        "logIndex": "161019266",
+        "logId": {
+          "keyId": "zxGZFVvd0FEmjR8WrFwMdcAJ9vtaY/QXf44Y1wUeP6A="
+        },
+        "kindVersion": {
+          "kind": "hashedrekord",
+          "version": "0.0.2"
+        },
+        "inclusionProof": {
+          "logIndex": "161019266",
+          "rootHash": "Ceu68Zo4YZ3F0zQpHt3XsNCKTd146jxwijSJCj0Iv9I=",
+          "treeSize": "161019267",
+          "hashes": [
+            "twWyjTR9AxoaTwJoyXPDNvDd3NrAKG4OHHkeVaD3Vfs=",
+            "6TgmhOu1npfL/IzP+QAHnbFgj+lAEzjznxmuDyAiaZU=",
+            "N2c0N1khWErHVWuz+DoXtHGXEXi0auHfbg47YmpXsdY=",
+            "T1h5f2EaRoYnfbxCGSw50WFjezpc1Ji6/nukwHNUHVE=",
+            "89sL4OWwoLRagfra1wd/eIpg8OwsQRoHPjk710FYt4w=",
+            "RULKuIwHNSVkbMKDJ8xE91vtGa/pnm5pqPgU8Of4WHo=",
+            "1Uz/y9x6fwCJm8pfreFtofBGgNhTgSIF8VDM/EoNgik=",
+            "z34p+nSdHmlwXrmJYuuE/XY67FaefvwwlZXG1Mb6zMU=",
+            "Qi6mRxM/3+YNxl2oyNoYC1AjZlS8h6D+3H/7GZOXkgc=",
+            "7MMAbhtq+uwCIByHjhH+cimwzqWoCE1LcapM5sNmNC8=",
+            "SnTXeQf3YPbX+etJ1AorTnKtAr25uQgdxTrupSgKzNU=",
+            "t+9ruqAHapTBCYxPiwd8o4RaqDWalDgPNfwyc9xqSjY=",
+            "dfIw5UpQDrySuhIKL/XbMVw0ZwWKPJUmYhf45oJW6bQ="
+          ],
+          "checkpoint": {
+            "envelope": "log2025-1.rekor.sigstore.dev\n161019267\nCeu68Zo4YZ3F0zQpHt3XsNCKTd146jxwijSJCj0Iv9I=\n\n— log2025-1.rekor.sigstore.dev zxGZFb1joO58vkyvKnH8GKPrrOtq2uBlCzoEAfpXZZu0psOrbgbmpXs2+F9Yv5Py809EcnAFaADIV3k65g126dcJqQw=\n— witness.navigli.sunlight.geomys.org o+AP4gAAAABq1ywgEreZgEEoxYNAqdiYS9tbZIv4Qz4kCqSSXDmGF7jV2BDNdKT19Nmz5d3jlfDY6xrjP6ys0AdUUrxDMKOwa7IXCg==\n— witness.stagemole.eu Z/euoAAAAABq1ywgRzYW9fcdTNc+mNFnYDfcKgptZdrhc03Ma1qBvZ21g5KdHewrCp77ANSSuLBPuKHnMqBr1dW49jwFqtb5zABHCA==\n— krabbel.ct.ipng.ch SxDb2AAAAABq1ywgVgz8WRNae4GM62qQHtX2tSb0dpuKTmvzZ+k6QZ0Ge427YZL5dDQ7kGf2CiPke7yXprhQSFmmZtduV4dlWmpdBA==\n— staging.witness.transparency.goog/ring-any-bells LhqNyQAAAABq1ywgDO8H6Rx74SXOC65ZZpiVOlASyXbyrCySJg8l9idMnkWgyXKlsh79Tk0ELDMFrQ6gnTgFLVXmCg4GYZp9fmQVDA==\n"
+          }
+        },
+        "canonicalizedBody": "eyJhcGlWZXJzaW9uIjoiMC4wLjIiLCJraW5kIjoiaGFzaGVkcmVrb3JkIiwic3BlYyI6eyJoYXNoZWRSZWtvcmRWMDAyIjp7ImRhdGEiOnsiYWxnb3JpdGhtIjoiU0hBMl8yNTYiLCJkaWdlc3QiOiJPSnJLbGwxWEh2TkNCMkNSWnN5ZU02SXIvYU5xL0JqSHNGV0xFdXlWRVo4PSJ9LCJzaWduYXR1cmUiOnsiY29udGVudCI6Ik1FVUNJUUQyUmtYdEl2d2t0bENLTWRnWXVDREtzcFpER3NiM09UQ3VldHZBTVg4VXBRSWdDaWVTZTlORllWY0Q5SVlKNVljYm5MK2pEMy84VmxaTm41TkEvbFFiM0tBPSIsInZlcmlmaWVyIjp7ImtleURldGFpbHMiOiJQS0lYX0VDRFNBX1AyNTZfU0hBXzI1NiIsInB1YmxpY0tleSI6eyJyYXdCeXRlcyI6Ik1Ga3dFd1lIS29aSXpqMENBUVlJS29aSXpqMERBUWNEUWdBRVdpQWptYVRON0h2QUw5OFI5OTVVMHNzV3haOGxYaVJramk1OE1mRFRoTVZaWGV6Smd3Z1BlSWFiVHZRN0x3K1BLVU90VXd6eWJJM3BJZkd0UDNESjFBPT0ifX19fX19"
+      }
+    ]
+  },
+  "messageSignature": {
+    "messageDigest": {
+      "algorithm": "SHA2_256",
+      "digest": "OJrKll1XHvNCB2CRZsyeM6Ir/aNq/BjHsFWLEuyVEZ8="
+    },
+    "signature": "MEUCIQD2RkXtIvwktlCKMdgYuCDKspZDGsb3OTCuetvAMX8UpQIgCieSe9NFYVcD9IYJ5YcbnL+jD3/8VlZNn5NA/lQb3KA="
+  }
+}
