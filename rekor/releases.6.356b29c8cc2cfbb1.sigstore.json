@@ -1,0 +1,56 @@
+{
+  "mediaType": "application/vnd.dev.sigstore.bundle.v0.3+json",
+  "verificationMaterial": {
+    "publicKey": {
+      "hint": "356b29c8cc2cfbb126975ce5b283c3ef8ea71c4314006554c7e8913b27cb6079"
+    },
+    "tlogEntries": [
+      {
+        "logIndex": "162821723",
+        "logId": {
+          "keyId": "zxGZFVvd0FEmjR8WrFwMdcAJ9vtaY/QXf44Y1wUeP6A="
+        },
+        "kindVersion": {
+          "kind": "hashedrekord",
+          "version": "0.0.2"
+        },
+        "inclusionProof": {
+          "logIndex": "162821723",
+          "rootHash": "IVufRUaHYWlCnw2L5zc7ZlaP9mkIP/VjYwiX81FF/AE=",
+          "treeSize": "162821735",
+          "hashes": [
+            "CChmFFDb11VF7LDP6zdBT11yyVRwGtYtVYZZT4yod3c=",
+            "SPygjNhzku6QIQ5FYk3SeJ/CdZMliKjRx+rG5gTBAnE=",
+            "ciRx2wwHs8dJ/wLxBJXqsj3/k5jk8R7iG7SOQi8jei4=",
+            "uw4Bx6BkUfQzp3JXVhejHq7LjhxefDcm9s8miZGOGMQ=",
+            "tKJARx4ctpHB0xzoMfbQeeYPnBs0IlUfos+l1EbNKz8=",
+            "GkVZaKvlrOGsaGl7lWJlzmh+7p28nXYfhpJt3Z3RnxU=",
+            "fovd1OMh9w1zpW3tzYGbqUY1KT3VR0Ur6q80Ny4qK90=",
+            "KtqXcBjk7i7LOMJvxZ6jsvA7ZaSBo2VJOLxNHhAy4DY=",
+            "D+8rxnULP4JpfZw83ykdmkxN6DN4K8lvZdxcOE1hYfc=",
+            "Mo40IW5AQV1AfWKKMMutpHVFCZEMdOJxXgYPMuhMgpk=",
+            "aAmqTza+U13jW9nL2sf0T6t9wOUrWv4XqQi34uTMFSI=",
+            "D5Z0d0SBTqo7h1ZzbjJ08eRDWqOS+/3+CKgnEbzR27k=",
+            "PATEPZKxo7oJHw2zafcIVAbZ+YzKLxjEpXxcv8VUOog=",
+            "g3klgzP6MfZCn0qxFph2sFH1Y1fPiTE3//MvSYS17zQ=",
+            "+qurD3pEBowTcwCBbMxCGtcPxuhH6q8xlxILbnzQSy8=",
+            "SnTXeQf3YPbX+etJ1AorTnKtAr25uQgdxTrupSgKzNU=",
+            "t+9ruqAHapTBCYxPiwd8o4RaqDWalDgPNfwyc9xqSjY=",
+            "dfIw5UpQDrySuhIKL/XbMVw0ZwWKPJUmYhf45oJW6bQ="
+          ],
+          "checkpoint": {
+            "envelope": "log2025-1.rekor.sigstore.dev\n162821735\nIVufRUaHYWlCnw2L5zc7ZlaP9mkIP/VjYwiX81FF/AE=\n\n— log2025-1.rekor.sigstore.dev zxGZFWyelxTm88l9T1TyTWHzXvY+dnEl03aBDzgNEM5BytnTYOe6Ug0L2P6wuhwZq9JF6RpX4uEdrP7GJhTtNZZhUwo=\n— witness.stagemole.eu Z/euoAAAAABq2KPAsTnWcaR0gCQxV8Wu21llFxPaf4ZifI0VkaEeZR8WSs3vK7Gkso4qZ39qB7BmfnPKoATUNRSBlpoMFzQOroNECQ==\n— staging.witness.transparency.goog/ring-any-bells LhqNyQAAAABq2KPA8j9hKrEizGoBimnhbMhPSxBOHGft4Uqtbl1MIgbqpwGO6jSMTWAIFMpYN2MCCKn7Cl4r1+ebPEdt7sYVjozsBg==\n— krabbel.ct.ipng.ch SxDb2AAAAABq2KPA9g9rauQQDk/1md/j+HG4ZGBybR1GVdy9brOC4R83hgKkHH/a3YTET3vHopRbgwrSfu3jeojfCkGDRl6CN1oMAA==\n— witness.navigli.sunlight.geomys.org o+AP4gAAAABq2KPADkLlO9DGwctQgPW8VY0qmnRg48L+iZaDo5ehX8EnPeC79x+TWrwqoqRmyYz2zATpbowGICxhHDJ8IBOzU68aDQ==\n"
+          }
+        },
+        "canonicalizedBody": "eyJhcGlWZXJzaW9uIjoiMC4wLjIiLCJraW5kIjoiaGFzaGVkcmVrb3JkIiwic3BlYyI6eyJoYXNoZWRSZWtvcmRWMDAyIjp7ImRhdGEiOnsiYWxnb3JpdGhtIjoiU0hBMl8yNTYiLCJkaWdlc3QiOiJhQTk3WXQyZys1Q3BwOVVyNDdUS1NhN2V2WTVGdVIyNmtoQnRJTVRUMEw4PSJ9LCJzaWduYXR1cmUiOnsiY29udGVudCI6Ik1FWUNJUUQ5VXl1VHF3cmpEb0Q0Z3h3VXhENnJhN3JlTVFycEU1VlBVUFllL1k5cmdBSWhBTU00SXJKV1JzZndrUG85U0dZTXpiTlhleDdKc2ttMXBvQlhteE1nWDBzZSIsInZlcmlmaWVyIjp7ImtleURldGFpbHMiOiJQS0lYX0VDRFNBX1AyNTZfU0hBXzI1NiIsInB1YmxpY0tleSI6eyJyYXdCeXRlcyI6Ik1Ga3dFd1lIS29aSXpqMENBUVlJS29aSXpqMERBUWNEUWdBRU1nOGxMUFhna256aWh0YU1Fbkx4aTFnUDB3M1lsdFdabzZQR0szR3VNYlFlWXFSZU5mbHpTMjNyVGpuVTVJeGpJTW5lNzJIbUk4aDE3ZC9BVUlRRktnPT0ifX19fX19"
+      }
+    ]
+  },
+  "messageSignature": {
+    "messageDigest": {
+      "algorithm": "SHA2_256",
+      "digest": "aA97Yt2g+5Cpp9Ur47TKSa7evY5FuR26khBtIMTT0L8="
+    },
+    "signature": "MEYCIQD9UyuTqwrjDoD4gxwUxD6ra7reMQrpE5VPUPYe/Y9rgAIhAMM4IrJWRsfwkPo9SGYMzbNXex7Jskm1poBXmxMgX0se"
+  }
+}
