@@ -1,0 +1,1470 @@
+name: linkorder
+networks:
+  egress-kopie-wyjscie:
+    driver: bridge
+    enable_ipv6: false
+    name: linkorder_egress-kopie-wyjscie
+  egress-poczta-wejscie:
+    driver: bridge
+    enable_ipv6: false
+    internal: true
+    name: linkorder_egress-poczta-wejscie
+  egress-poczta-wyjscie:
+    driver: bridge
+    enable_ipv6: false
+    name: linkorder_egress-poczta-wyjscie
+  egress-publiczny-wejscie:
+    driver: bridge
+    enable_ipv6: false
+    internal: true
+    name: linkorder_egress-publiczny-wejscie
+  egress-publiczny-wyjscie:
+    driver: bridge
+    enable_ipv6: false
+    name: linkorder_egress-publiczny-wyjscie
+  egress-wejscie:
+    driver: bridge
+    enable_ipv6: false
+    internal: true
+    name: linkorder_egress-wejscie
+  egress-wyjscie:
+    driver: bridge
+    enable_ipv6: false
+    name: linkorder_egress-wyjscie
+  front:
+    driver: bridge
+    enable_ipv6: false
+    internal: true
+    name: linkorder_front
+  front-api:
+    driver: bridge
+    enable_ipv6: false
+    internal: true
+    name: linkorder_front-api
+  front-hooks:
+    driver: bridge
+    enable_ipv6: false
+    internal: true
+    name: linkorder_front-hooks
+  kopie:
+    driver: bridge
+    enable_ipv6: false
+    internal: true
+    name: linkorder_kopie
+  public:
+    driver: bridge
+    enable_ipv6: false
+    name: linkorder_public
+  valkey:
+    driver: bridge
+    enable_ipv6: false
+    internal: true
+    name: linkorder_valkey
+secrets:
+  app_key:
+    file: /var/lib/linkorder/secrets/app/app_key
+    name: linkorder_app_key
+  backup_pgp_public_key:
+    file: /var/lib/linkorder/secrets/backup/pgp_public_key.asc
+    name: linkorder_backup_pgp_public_key
+  db_app_api:
+    file: /var/lib/linkorder/secrets/db/app_api
+    name: linkorder_db_app_api
+  db_app_mailer:
+    file: /var/lib/linkorder/secrets/db/app_mailer
+    name: linkorder_db_app_mailer
+  db_app_media:
+    file: /var/lib/linkorder/secrets/db/app_media
+    name: linkorder_db_app_media
+  db_app_relay:
+    file: /var/lib/linkorder/secrets/db/app_relay
+    name: linkorder_db_app_relay
+  db_app_scheduler:
+    file: /var/lib/linkorder/secrets/db/app_scheduler
+    name: linkorder_db_app_scheduler
+  db_app_web:
+    file: /var/lib/linkorder/secrets/db/app_web
+    name: linkorder_db_app_web
+  db_app_webhook:
+    file: /var/lib/linkorder/secrets/db/app_webhook
+    name: linkorder_db_app_webhook
+  db_app_webhooks_out:
+    file: /var/lib/linkorder/secrets/db/app_webhooks_out
+    name: linkorder_db_app_webhooks_out
+  db_app_worker:
+    file: /var/lib/linkorder/secrets/db/app_worker
+    name: linkorder_db_app_worker
+  db_lo_walg:
+    file: /var/lib/linkorder/secrets/db/lo_walg
+    name: linkorder_db_lo_walg
+  db_migrator:
+    file: /var/lib/linkorder/secrets/db/migrator
+    name: linkorder_db_migrator
+  mail_identity:
+    file: /var/lib/linkorder/secrets/mail/identity.json
+    name: linkorder_mail_identity
+  mailer_private_key:
+    file: /var/lib/linkorder/secrets/app/mailer_private_key
+    name: linkorder_mailer_private_key
+  mailer_public_key:
+    file: /var/lib/linkorder/secrets/app/mailer_public_key
+    name: linkorder_mailer_public_key
+  totp_key:
+    file: /var/lib/linkorder/secrets/app/totp_key
+    name: linkorder_totp_key
+  valkey_api:
+    file: /var/lib/linkorder/secrets/valkey/api
+    name: linkorder_valkey_api
+  valkey_api_hash:
+    file: /var/lib/linkorder/secrets/valkey/api.sha256
+    name: linkorder_valkey_api_hash
+  valkey_bulk:
+    file: /var/lib/linkorder/secrets/valkey/bulk
+    name: linkorder_valkey_bulk
+  valkey_bulk_hash:
+    file: /var/lib/linkorder/secrets/valkey/bulk.sha256
+    name: linkorder_valkey_bulk_hash
+  valkey_panel:
+    file: /var/lib/linkorder/secrets/valkey/panel
+    name: linkorder_valkey_panel
+  valkey_panel_hash:
+    file: /var/lib/linkorder/secrets/valkey/panel.sha256
+    name: linkorder_valkey_panel_hash
+  valkey_relay:
+    file: /var/lib/linkorder/secrets/valkey/relay
+    name: linkorder_valkey_relay
+  valkey_relay_hash:
+    file: /var/lib/linkorder/secrets/valkey/relay.sha256
+    name: linkorder_valkey_relay_hash
+  valkey_scheduler:
+    file: /var/lib/linkorder/secrets/valkey/scheduler
+    name: linkorder_valkey_scheduler
+  valkey_scheduler_hash:
+    file: /var/lib/linkorder/secrets/valkey/scheduler.sha256
+    name: linkorder_valkey_scheduler_hash
+  valkey_worker:
+    file: /var/lib/linkorder/secrets/valkey/worker
+    name: linkorder_valkey_worker
+  valkey_worker_hash:
+    file: /var/lib/linkorder/secrets/valkey/worker.sha256
+    name: linkorder_valkey_worker_hash
+  vault_private_key:
+    file: /var/lib/linkorder/secrets/app/vault_private_key
+    name: linkorder_vault_private_key
+  vault_public_key:
+    file: /var/lib/linkorder/secrets/app/vault_public_key
+    name: linkorder_vault_public_key
+  walg_config:
+    file: /var/lib/linkorder/secrets/backup/walg.json
+    name: linkorder_walg_config
+  webhooks_private_key:
+    file: /var/lib/linkorder/secrets/app/webhooks_private_key
+    name: linkorder_webhooks_private_key
+  webhooks_public_key:
+    file: /var/lib/linkorder/secrets/app/webhooks_public_key
+    name: linkorder_webhooks_public_key
+services:
+  cli:
+    cap_drop:
+      - ALL
+    command:
+      - php
+      - artisan
+      - list
+    depends_on:
+      postgres:
+        condition: service_healthy
+        required: true
+    environment:
+      APP_KEY_FILE: /run/secrets/app_key
+      APP_URL: https://${LINKORDER_APP_HOST:?brak nazwy panelu}
+      DB_DATABASE: linkorder
+      DB_HOST: /var/run/postgresql
+      DB_PASSWORD_FILE: /run/secrets/db_password
+      DB_USERNAME: app_web
+      LINKORDER_HOOKS_URL: https://${LINKORDER_HOOKS_HOST:?brak nazwy adresu powiadomień}
+      LINKORDER_ROLE: cli
+      PHP_MEMORY_LIMIT: 256M
+      QUEUE_CONNECTION: "null"
+      REDIS_CACHE_HOST: valkey-cache
+      REDIS_HOST: valkey-core
+      REDIS_PREFIX: 'lo:'
+    image: ghcr.io/collreview/linkorder-app@sha256:7238e7db8a10a52b77ba538b7a6f6907251c22096461cc8182502110e85725c0
+    init: true
+    mem_limit: ${LINKORDER_MEM_CLI:?}
+    memswap_limit: ${LINKORDER_MEM_CLI:?}
+    network_mode: none
+    oom_score_adj: 600
+    pids_limit: 32
+    profiles:
+      - jobs
+    pull_policy: never
+    read_only: true
+    restart: 'no'
+    secrets:
+      - source: app_key
+        target: /run/secrets/app_key
+      - source: db_app_web
+        target: db_password
+    security_opt:
+      - no-new-privileges:true
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+      - /run:size=32m,mode=0755,uid=10001,gid=10000
+    user: 10001:10000
+    volumes:
+      - read_only: true
+        source: pg-socket
+        target: /var/run/postgresql
+        type: volume
+  edge:
+    cap_drop:
+      - ALL
+    depends_on:
+      web-panel:
+        condition: service_healthy
+        required: true
+    environment:
+      LINKORDER_APP_HOST: ${LINKORDER_APP_HOST:?brak nazwy panelu}
+      LINKORDER_HOOKS_HOST: ${LINKORDER_HOOKS_HOST:?brak nazwy adresu powiadomień}
+    healthcheck:
+      interval: 15s
+      retries: 3
+      start_period: 20s
+      test:
+        - CMD
+        - /usr/local/bin/linkorder-edge-health
+      timeout: 5s
+    image: ghcr.io/collreview/linkorder-edge@sha256:bbde7dc2fb77be25dc100ec9bf742678ffaf44e4f631d579f06b2192c1f46648
+    init: true
+    mem_limit: ${LINKORDER_MEM_EDGE:?}
+    memswap_limit: ${LINKORDER_MEM_EDGE:?}
+    networks:
+      front: null
+      front-api: null
+      front-hooks: null
+      public: null
+    oom_score_adj: 500
+    pids_limit: 128
+    ports:
+      - host_ip: 0.0.0.0
+        mode: ingress
+        protocol: tcp
+        published: "80"
+        target: 8080
+      - host_ip: 0.0.0.0
+        mode: ingress
+        protocol: tcp
+        published: "443"
+        target: 8443
+    pull_policy: never
+    read_only: true
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    stop_grace_period: 30s
+    stop_signal: SIGQUIT
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+      - /run:size=8m,mode=0755,uid=10002,gid=10002
+    ulimits:
+      nofile:
+        hard: 65536
+        soft: 65536
+    user: 10002:10002
+    volumes:
+      - bind:
+          create_host_path: false
+        read_only: true
+        source: /var/lib/linkorder/tls
+        target: /etc/linkorder/tls
+        type: bind
+      - bind:
+          create_host_path: false
+        read_only: true
+        source: /var/lib/linkorder/acme/webroot
+        target: /srv/acme
+        type: bind
+  egress:
+    cap_drop:
+      - ALL
+    environment:
+      LINKORDER_EGRESS_MODE: ${LINKORDER_EGRESS_MODE:-demo}
+      LINKORDER_EGRESS_SANDBOX: ${LINKORDER_EGRESS_SANDBOX:-0}
+    healthcheck:
+      interval: 15s
+      retries: 3
+      start_period: 10s
+      test:
+        - CMD
+        - /usr/local/bin/egress
+        - health
+      timeout: 5s
+    image: ghcr.io/collreview/linkorder-egress@sha256:0bcbb4c2134f421e98436e22516b39b857f8b861051080c2ebd88af08c628230
+    init: true
+    mem_limit: ${LINKORDER_MEM_EGRESS:?}
+    memswap_limit: ${LINKORDER_MEM_EGRESS:?}
+    networks:
+      egress-wejscie: null
+      egress-wyjscie: null
+    oom_score_adj: 500
+    pids_limit: 64
+    pull_policy: never
+    read_only: true
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    stop_grace_period: 10s
+    user: 10005:10005
+    volumes:
+      - bind:
+          create_host_path: false
+        read_only: true
+        source: /var/lib/linkorder/egress/sklepy
+        target: /etc/linkorder/egress/sklepy
+        type: bind
+  egress-kopie:
+    cap_drop:
+      - ALL
+    command:
+      - serve-backup
+    healthcheck:
+      interval: 15s
+      retries: 3
+      start_period: 10s
+      test:
+        - CMD
+        - /usr/local/bin/egress
+        - health
+      timeout: 5s
+    image: ghcr.io/collreview/linkorder-egress@sha256:0bcbb4c2134f421e98436e22516b39b857f8b861051080c2ebd88af08c628230
+    init: true
+    mem_limit: ${LINKORDER_MEM_EGRESS:?}
+    memswap_limit: ${LINKORDER_MEM_EGRESS:?}
+    networks:
+      egress-kopie-wyjscie: null
+      kopie: null
+    oom_score_adj: 500
+    pids_limit: 64
+    pull_policy: never
+    read_only: true
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    stop_grace_period: 10s
+    user: 10005:10005
+    volumes:
+      - bind:
+          create_host_path: false
+        read_only: true
+        source: /var/lib/linkorder/egress/kopie
+        target: /etc/linkorder/egress/kopie
+        type: bind
+  egress-poczta:
+    cap_drop:
+      - ALL
+    command:
+      - serve-mail
+    healthcheck:
+      interval: 15s
+      retries: 3
+      start_period: 10s
+      test:
+        - CMD
+        - /usr/local/bin/egress
+        - health
+      timeout: 5s
+    image: ghcr.io/collreview/linkorder-egress@sha256:0bcbb4c2134f421e98436e22516b39b857f8b861051080c2ebd88af08c628230
+    init: true
+    mem_limit: ${LINKORDER_MEM_EGRESS:?}
+    memswap_limit: ${LINKORDER_MEM_EGRESS:?}
+    networks:
+      egress-poczta-wejscie: null
+      egress-poczta-wyjscie: null
+    oom_score_adj: 500
+    pids_limit: 64
+    pull_policy: never
+    read_only: true
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    stop_grace_period: 10s
+    user: 10005:10005
+    volumes:
+      - bind:
+          create_host_path: false
+        read_only: true
+        source: /var/lib/linkorder/egress/poczta
+        target: /etc/linkorder/egress/poczta
+        type: bind
+  egress-publiczny:
+    cap_drop:
+      - ALL
+    command:
+      - serve-public
+    environment:
+      LINKORDER_APP_HOST: ${LINKORDER_APP_HOST:?brak nazwy panelu}
+      LINKORDER_HOOKS_HOST: ${LINKORDER_HOOKS_HOST:?brak nazwy adresu powiadomień}
+    healthcheck:
+      interval: 15s
+      retries: 3
+      start_period: 10s
+      test:
+        - CMD
+        - /usr/local/bin/egress
+        - health
+      timeout: 5s
+    image: ghcr.io/collreview/linkorder-egress@sha256:0bcbb4c2134f421e98436e22516b39b857f8b861051080c2ebd88af08c628230
+    init: true
+    mem_limit: ${LINKORDER_MEM_EGRESS:?}
+    memswap_limit: ${LINKORDER_MEM_EGRESS:?}
+    networks:
+      egress-publiczny-wejscie: null
+      egress-publiczny-wyjscie: null
+    oom_score_adj: 500
+    pids_limit: 64
+    pull_policy: never
+    read_only: true
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    stop_grace_period: 10s
+    user: 10005:10005
+  mailer:
+    cap_drop:
+      - ALL
+    command:
+      - mailer
+    depends_on:
+      egress-poczta:
+        condition: service_healthy
+        required: true
+      postgres:
+        condition: service_healthy
+        required: true
+    environment:
+      APP_URL: https://${LINKORDER_APP_HOST:?brak nazwy panelu}
+      DB_DATABASE: linkorder
+      DB_HOST: /var/run/postgresql
+      DB_PASSWORD_FILE: /run/secrets/db_password
+      DB_USERNAME: app_mailer
+      LINKORDER_HOOKS_URL: https://${LINKORDER_HOOKS_HOST:?brak nazwy adresu powiadomień}
+      LINKORDER_MAIL_IDENTITY_FILE: /run/secrets/mail_identity
+      LINKORDER_MAILER_PRIVATE_KEY_FILE: /run/secrets/mailer_private_key
+      LINKORDER_ROLE: mailer
+      LINKORDER_SMTP_RELAY: egress-poczta:4753
+      PHP_MEMORY_LIMIT: 128M
+      QUEUE_CONNECTION: "null"
+    healthcheck:
+      interval: 30s
+      retries: 3
+      start_period: 60s
+      test:
+        - CMD
+        - /usr/local/bin/linkorder-health
+        - heartbeat
+        - "120"
+      timeout: 5s
+    image: ghcr.io/collreview/linkorder-app@sha256:7238e7db8a10a52b77ba538b7a6f6907251c22096461cc8182502110e85725c0
+    init: true
+    mem_limit: ${LINKORDER_MEM_MAILER:?}
+    memswap_limit: ${LINKORDER_MEM_MAILER:?}
+    networks:
+      egress-poczta-wejscie: null
+    oom_score_adj: 600
+    pids_limit: 32
+    pull_policy: never
+    read_only: true
+    restart: unless-stopped
+    secrets:
+      - source: db_app_mailer
+        target: db_password
+      - source: mailer_private_key
+        target: /run/secrets/mailer_private_key
+      - source: mail_identity
+        target: /run/secrets/mail_identity
+    security_opt:
+      - no-new-privileges:true
+    stop_grace_period: 45s
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+      - /run:size=32m,mode=0755,uid=10015,gid=10000
+    user: 10015:10000
+    volumes:
+      - read_only: true
+        source: pg-socket
+        target: /var/run/postgresql
+        type: volume
+  media:
+    cap_drop:
+      - ALL
+    command:
+      - media
+    depends_on:
+      postgres:
+        condition: service_healthy
+        required: true
+    environment:
+      APP_URL: https://${LINKORDER_APP_HOST:?brak nazwy panelu}
+      DB_DATABASE: linkorder
+      DB_HOST: /var/run/postgresql
+      DB_PASSWORD_FILE: /run/secrets/db_password
+      DB_USERNAME: app_media
+      LINKORDER_HOOKS_URL: https://${LINKORDER_HOOKS_HOST:?brak nazwy adresu powiadomień}
+      LINKORDER_ROLE: media
+      PHP_MEMORY_LIMIT: 256M
+      QUEUE_CONNECTION: "null"
+    healthcheck:
+      interval: 30s
+      retries: 3
+      start_period: 60s
+      test:
+        - CMD
+        - /usr/local/bin/linkorder-health
+        - heartbeat
+        - "120"
+      timeout: 5s
+    image: ghcr.io/collreview/linkorder-app@sha256:7238e7db8a10a52b77ba538b7a6f6907251c22096461cc8182502110e85725c0
+    init: true
+    mem_limit: ${LINKORDER_MEM_MEDIA:?}
+    memswap_limit: ${LINKORDER_MEM_MEDIA:?}
+    network_mode: none
+    oom_score_adj: 600
+    pids_limit: 32
+    pull_policy: never
+    read_only: true
+    restart: unless-stopped
+    secrets:
+      - source: db_app_media
+        target: db_password
+    security_opt:
+      - no-new-privileges:true
+    stop_grace_period: 75s
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+      - /run:size=32m,mode=0755,uid=10013,gid=10000
+    user: 10013:10000
+    volumes:
+      - read_only: true
+        source: pg-socket
+        target: /var/run/postgresql
+        type: volume
+  migrate:
+    cap_drop:
+      - ALL
+    command:
+      - migrate
+    depends_on:
+      postgres:
+        condition: service_healthy
+        required: true
+    environment:
+      APP_KEY_FILE: /run/secrets/app_key
+      APP_URL: https://${LINKORDER_APP_HOST:?brak nazwy panelu}
+      DB_DATABASE: linkorder
+      DB_HOST: /var/run/postgresql
+      DB_PASSWORD_FILE: /run/secrets/db_password
+      DB_USERNAME: migrator
+      LINKORDER_HOOKS_URL: https://${LINKORDER_HOOKS_HOST:?brak nazwy adresu powiadomień}
+      LINKORDER_ROLE: migrate
+      PHP_MEMORY_LIMIT: 512M
+      QUEUE_CONNECTION: "null"
+      REDIS_CACHE_HOST: valkey-cache
+      REDIS_HOST: valkey-core
+      REDIS_PREFIX: 'lo:'
+    image: ghcr.io/collreview/linkorder-app@sha256:7238e7db8a10a52b77ba538b7a6f6907251c22096461cc8182502110e85725c0
+    init: true
+    mem_limit: ${LINKORDER_MEM_MIGRATE:?}
+    memswap_limit: ${LINKORDER_MEM_MIGRATE:?}
+    network_mode: none
+    oom_score_adj: 600
+    pids_limit: 32
+    profiles:
+      - jobs
+    pull_policy: never
+    read_only: true
+    restart: 'no'
+    secrets:
+      - source: app_key
+        target: /run/secrets/app_key
+      - source: db_migrator
+        target: db_password
+    security_opt:
+      - no-new-privileges:true
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+      - /run:size=32m,mode=0755,uid=10010,gid=10000
+    user: 10010:10000
+    volumes:
+      - read_only: true
+        source: pg-socket
+        target: /var/run/postgresql
+        type: volume
+  postgres:
+    cap_drop:
+      - ALL
+    environment:
+      LINKORDER_BACKUP_ARCHIVE: ${LINKORDER_BACKUP_ARCHIVE:-off}
+      LINKORDER_PG_PROFILE: ${LINKORDER_PROFILE:?brak profilu instalacji}
+    healthcheck:
+      interval: 10s
+      retries: 6
+      start_period: 120s
+      test:
+        - CMD
+        - pg_isready
+        - --host=/var/run/postgresql
+        - --dbname=linkorder
+        - --quiet
+      timeout: 5s
+    image: ghcr.io/collreview/linkorder-postgres@sha256:11f9d630c310f74a1ac2dd74ddc290b19777fa65c9b938a3a0399bad7b588edb
+    logging:
+      driver: local
+      options:
+        max-file: "5"
+        max-size: 20m
+    network_mode: none
+    oom_score_adj: -1000
+    pids_limit: 512
+    pull_policy: never
+    read_only: true
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    shm_size: 1gb
+    stop_grace_period: 120s
+    stop_signal: SIGINT
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+    ulimits:
+      nofile:
+        hard: 65536
+        soft: 65536
+    user: 10999:10999
+    volumes:
+      - bind:
+          create_host_path: false
+        source: /var/lib/linkorder/postgres
+        target: /var/lib/postgresql
+        type: bind
+      - source: pg-socket
+        target: /var/run/postgresql
+        type: volume
+      - read_only: true
+        source: walg-socket
+        target: /var/run/walg
+        type: volume
+  relay:
+    cap_drop:
+      - ALL
+    command:
+      - relay
+    depends_on:
+      postgres:
+        condition: service_healthy
+        required: true
+      valkey-core:
+        condition: service_healthy
+        required: true
+    environment:
+      APP_KEY_FILE: /run/secrets/app_key
+      APP_URL: https://${LINKORDER_APP_HOST:?brak nazwy panelu}
+      DB_DATABASE: linkorder
+      DB_HOST: /var/run/postgresql
+      DB_PASSWORD_FILE: /run/secrets/db_password
+      DB_USERNAME: app_relay
+      LINKORDER_HOOKS_URL: https://${LINKORDER_HOOKS_HOST:?brak nazwy adresu powiadomień}
+      LINKORDER_ROLE: relay
+      PHP_MEMORY_LIMIT: 128M
+      QUEUE_CONNECTION: "null"
+      REDIS_CACHE_HOST: valkey-cache
+      REDIS_HOST: valkey-core
+      REDIS_PASSWORD_FILE: /run/secrets/valkey_password
+      REDIS_PREFIX: 'lo:'
+      REDIS_USERNAME: relay
+    healthcheck:
+      interval: 30s
+      retries: 3
+      start_period: 60s
+      test:
+        - CMD
+        - /usr/local/bin/linkorder-health
+        - heartbeat
+        - "120"
+      timeout: 5s
+    image: ghcr.io/collreview/linkorder-app@sha256:7238e7db8a10a52b77ba538b7a6f6907251c22096461cc8182502110e85725c0
+    init: true
+    mem_limit: ${LINKORDER_MEM_RELAY:?}
+    memswap_limit: ${LINKORDER_MEM_RELAY:?}
+    networks:
+      valkey: null
+    oom_score_adj: 600
+    pids_limit: 32
+    pull_policy: never
+    read_only: true
+    restart: unless-stopped
+    secrets:
+      - source: app_key
+        target: /run/secrets/app_key
+      - source: db_app_relay
+        target: db_password
+      - source: valkey_relay
+        target: valkey_password
+    security_opt:
+      - no-new-privileges:true
+    stop_grace_period: 30s
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+      - /run:size=32m,mode=0755,uid=10008,gid=10000
+    user: 10008:10000
+    volumes:
+      - read_only: true
+        source: pg-socket
+        target: /var/run/postgresql
+        type: volume
+  scheduler:
+    cap_drop:
+      - ALL
+    command:
+      - scheduler
+    depends_on:
+      postgres:
+        condition: service_healthy
+        required: true
+      valkey-core:
+        condition: service_healthy
+        required: true
+    environment:
+      APP_KEY_FILE: /run/secrets/app_key
+      APP_URL: https://${LINKORDER_APP_HOST:?brak nazwy panelu}
+      DB_DATABASE: linkorder
+      DB_HOST: /var/run/postgresql
+      DB_PASSWORD_FILE: /run/secrets/db_password
+      DB_USERNAME: app_scheduler
+      LINKORDER_HOOKS_URL: https://${LINKORDER_HOOKS_HOST:?brak nazwy adresu powiadomień}
+      LINKORDER_ROLE: scheduler
+      PHP_MEMORY_LIMIT: 256M
+      QUEUE_CONNECTION: "null"
+      REDIS_CACHE_HOST: valkey-cache
+      REDIS_HOST: valkey-core
+      REDIS_PASSWORD_FILE: /run/secrets/valkey_password
+      REDIS_PREFIX: 'lo:'
+      REDIS_USERNAME: scheduler
+    healthcheck:
+      interval: 30s
+      retries: 3
+      start_period: 90s
+      test:
+        - CMD
+        - /usr/local/bin/linkorder-health
+        - heartbeat
+        - "150"
+      timeout: 5s
+    image: ghcr.io/collreview/linkorder-app@sha256:7238e7db8a10a52b77ba538b7a6f6907251c22096461cc8182502110e85725c0
+    init: true
+    mem_limit: ${LINKORDER_MEM_SCHEDULER:?}
+    memswap_limit: ${LINKORDER_MEM_SCHEDULER:?}
+    networks:
+      valkey: null
+    oom_score_adj: 600
+    pids_limit: 64
+    pull_policy: never
+    read_only: true
+    restart: unless-stopped
+    secrets:
+      - source: app_key
+        target: /run/secrets/app_key
+      - source: db_app_scheduler
+        target: db_password
+      - source: valkey_scheduler
+        target: valkey_password
+    security_opt:
+      - no-new-privileges:true
+    stop_grace_period: 30s
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+      - /run:size=32m,mode=0755,uid=10009,gid=10000
+    user: 10009:10000
+    volumes:
+      - read_only: true
+        source: pg-socket
+        target: /var/run/postgresql
+        type: volume
+  valkey-cache:
+    cap_drop:
+      - ALL
+    command:
+      - cache
+    environment:
+      LINKORDER_VALKEY_MAXMEMORY: ${LINKORDER_VALKEY_CACHE_MAXMEMORY:?}
+    healthcheck:
+      interval: 10s
+      retries: 5
+      start_period: 10s
+      test:
+        - CMD
+        - /usr/local/bin/linkorder-valkey-health
+      timeout: 5s
+    image: ghcr.io/collreview/linkorder-valkey@sha256:ae2027d7bc282eaf2ef636593b73aedfbe8d4542c4e9128bc35d500be6bb6f80
+    init: true
+    mem_limit: ${LINKORDER_MEM_VALKEY_CACHE:?}
+    memswap_limit: ${LINKORDER_MEM_VALKEY_CACHE:?}
+    networks:
+      valkey: null
+    oom_score_adj: 400
+    pids_limit: 64
+    pull_policy: never
+    read_only: true
+    restart: unless-stopped
+    secrets:
+      - source: valkey_panel_hash
+        target: /run/secrets/valkey_panel_hash
+      - source: valkey_worker_hash
+        target: /run/secrets/valkey_worker_hash
+      - source: valkey_bulk_hash
+        target: /run/secrets/valkey_bulk_hash
+      - source: valkey_relay_hash
+        target: /run/secrets/valkey_relay_hash
+      - source: valkey_scheduler_hash
+        target: /run/secrets/valkey_scheduler_hash
+      - source: valkey_api_hash
+        target: /run/secrets/valkey_api_hash
+    security_opt:
+      - no-new-privileges:true
+    stop_grace_period: 10s
+    tmpfs:
+      - /run:size=4m,mode=0755,uid=10004,gid=10004
+    user: 10004:10004
+  valkey-core:
+    cap_drop:
+      - ALL
+    command:
+      - core
+    environment:
+      LINKORDER_VALKEY_MAXMEMORY: ${LINKORDER_VALKEY_CORE_MAXMEMORY:?}
+    healthcheck:
+      interval: 10s
+      retries: 5
+      start_period: 30s
+      test:
+        - CMD
+        - /usr/local/bin/linkorder-valkey-health
+      timeout: 5s
+    image: ghcr.io/collreview/linkorder-valkey@sha256:ae2027d7bc282eaf2ef636593b73aedfbe8d4542c4e9128bc35d500be6bb6f80
+    init: true
+    mem_limit: ${LINKORDER_MEM_VALKEY_CORE:?}
+    memswap_limit: ${LINKORDER_MEM_VALKEY_CORE:?}
+    networks:
+      valkey: null
+    oom_score_adj: 200
+    pids_limit: 64
+    pull_policy: never
+    read_only: true
+    restart: unless-stopped
+    secrets:
+      - source: valkey_panel_hash
+        target: /run/secrets/valkey_panel_hash
+      - source: valkey_worker_hash
+        target: /run/secrets/valkey_worker_hash
+      - source: valkey_bulk_hash
+        target: /run/secrets/valkey_bulk_hash
+      - source: valkey_relay_hash
+        target: /run/secrets/valkey_relay_hash
+      - source: valkey_scheduler_hash
+        target: /run/secrets/valkey_scheduler_hash
+      - source: valkey_api_hash
+        target: /run/secrets/valkey_api_hash
+    security_opt:
+      - no-new-privileges:true
+    stop_grace_period: 30s
+    tmpfs:
+      - /run:size=4m,mode=0755,uid=10004,gid=10004
+    user: 10004:10004
+    volumes:
+      - bind:
+          create_host_path: false
+        source: /var/lib/linkorder/valkey/core
+        target: /data
+        type: bind
+  walg:
+    cap_drop:
+      - ALL
+    command:
+      - daemon
+    entrypoint:
+      - /usr/local/bin/linkorder-walg
+    environment:
+      HOME: /tmp
+      HTTPS_PROXY: http://egress-kopie:4752
+      LINKORDER_BACKUP_ARCHIVE: ${LINKORDER_BACKUP_ARCHIVE:-off}
+      PGDATABASE: linkorder
+      PGHOST: /var/run/postgresql
+      PGUSER: lo_walg
+      WALG_DAEMON_WAL_UPLOAD_TIMEOUT: 240s
+      WALG_UPLOAD_CONCURRENCY: "1"
+    healthcheck:
+      interval: 30s
+      retries: 3
+      start_period: 30s
+      test:
+        - CMD
+        - /usr/local/bin/linkorder-walg
+        - health
+      timeout: 5s
+    image: ghcr.io/collreview/linkorder-postgres@sha256:11f9d630c310f74a1ac2dd74ddc290b19777fa65c9b938a3a0399bad7b588edb
+    init: true
+    logging:
+      driver: local
+      options:
+        max-file: "3"
+        max-size: 10m
+    mem_limit: 512m
+    memswap_limit: 512m
+    networks:
+      kopie: null
+    pids_limit: 128
+    pull_policy: never
+    read_only: true
+    restart: unless-stopped
+    secrets:
+      - source: walg_config
+        target: walg_config
+      - source: backup_pgp_public_key
+        target: backup_pgp_public_key
+      - source: db_lo_walg
+        target: db_password
+    security_opt:
+      - no-new-privileges:true
+    stop_grace_period: 60s
+    tmpfs:
+      - /tmp:size=16m,mode=0700,uid=10014,gid=10999
+    user: 10014:10999
+    volumes:
+      - bind:
+          create_host_path: false
+        read_only: true
+        source: /var/lib/linkorder/postgres
+        target: /var/lib/postgresql
+        type: bind
+      - read_only: true
+        source: pg-socket
+        target: /var/run/postgresql
+        type: volume
+      - source: walg-socket
+        target: /var/run/walg
+        type: volume
+  walg-restore:
+    cap_drop:
+      - ALL
+    command:
+      - restore-test
+    entrypoint:
+      - /usr/local/bin/linkorder-walg
+    environment:
+      HOME: /run/restore
+      HTTPS_PROXY: http://egress-kopie:4752
+    image: ghcr.io/collreview/linkorder-postgres@sha256:11f9d630c310f74a1ac2dd74ddc290b19777fa65c9b938a3a0399bad7b588edb
+    init: true
+    logging:
+      driver: local
+      options:
+        max-file: "3"
+        max-size: 10m
+    mem_limit: 2g
+    memswap_limit: 2g
+    networks:
+      kopie: null
+    pids_limit: 256
+    profiles:
+      - jobs
+    pull_policy: never
+    read_only: true
+    restart: 'no'
+    security_opt:
+      - no-new-privileges:true
+    shm_size: 256m
+    tmpfs:
+      - /run/restore:size=16m,mode=0700,uid=10999,gid=10999
+      - /tmp:size=64m,mode=1777
+    user: 10999:10999
+    volumes:
+      - source: restore-scratch
+        target: /var/lib/linkorder-restore
+        type: volume
+  web-api:
+    cap_drop:
+      - ALL
+    command:
+      - web-api
+    depends_on:
+      postgres:
+        condition: service_healthy
+        required: true
+      valkey-cache:
+        condition: service_healthy
+        required: true
+      valkey-core:
+        condition: service_healthy
+        required: true
+    environment:
+      APP_KEY_FILE: /run/secrets/app_key
+      APP_URL: https://${LINKORDER_APP_HOST:?brak nazwy panelu}
+      DB_DATABASE: linkorder
+      DB_HOST: /var/run/postgresql
+      DB_PASSWORD_FILE: /run/secrets/db_password
+      DB_USERNAME: app_api
+      LINKORDER_FPM_CHILDREN: ${LINKORDER_FPM_API_CHILDREN:?}
+      LINKORDER_FPM_MEMORY_LIMIT: 128M
+      LINKORDER_FPM_TIMEOUT: 30s
+      LINKORDER_HOOKS_URL: https://${LINKORDER_HOOKS_HOST:?brak nazwy adresu powiadomień}
+      LINKORDER_ROLE: web-api
+      QUEUE_CONNECTION: "null"
+      REDIS_CACHE_HOST: valkey-cache
+      REDIS_HOST: valkey-core
+      REDIS_PASSWORD_FILE: /run/secrets/valkey_password
+      REDIS_PREFIX: 'lo:'
+      REDIS_USERNAME: api
+    healthcheck:
+      interval: 15s
+      retries: 3
+      start_period: 60s
+      test:
+        - CMD
+        - /usr/local/bin/linkorder-health
+        - web
+      timeout: 10s
+    image: ghcr.io/collreview/linkorder-app@sha256:7238e7db8a10a52b77ba538b7a6f6907251c22096461cc8182502110e85725c0
+    init: true
+    mem_limit: ${LINKORDER_MEM_WEB_API:?}
+    memswap_limit: ${LINKORDER_MEM_WEB_API:?}
+    networks:
+      front-api: null
+      valkey: null
+    oom_score_adj: 600
+    pids_limit: 128
+    pull_policy: never
+    read_only: true
+    restart: unless-stopped
+    secrets:
+      - source: app_key
+        target: /run/secrets/app_key
+      - source: db_app_api
+        target: db_password
+      - source: valkey_api
+        target: valkey_password
+    security_opt:
+      - no-new-privileges:true
+    stop_grace_period: 35s
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+      - /run:size=32m,mode=0755,uid=10011,gid=10000
+    user: 10011:10000
+    volumes:
+      - read_only: true
+        source: pg-socket
+        target: /var/run/postgresql
+        type: volume
+  web-hooks:
+    cap_drop:
+      - ALL
+    command:
+      - web-hooks
+    depends_on:
+      postgres:
+        condition: service_healthy
+        required: true
+    environment:
+      APP_URL: https://${LINKORDER_APP_HOST:?brak nazwy panelu}
+      DB_DATABASE: linkorder
+      DB_HOST: /var/run/postgresql
+      DB_PASSWORD_FILE: /run/secrets/db_password
+      DB_USERNAME: app_webhook
+      LINKORDER_FPM_CHILDREN: ${LINKORDER_FPM_HOOKS_CHILDREN:?}
+      LINKORDER_FPM_MEMORY_LIMIT: 64M
+      LINKORDER_FPM_TIMEOUT: 10s
+      LINKORDER_HOOKS_URL: https://${LINKORDER_HOOKS_HOST:?brak nazwy adresu powiadomień}
+      LINKORDER_ROLE: web-hooks
+      QUEUE_CONNECTION: "null"
+    healthcheck:
+      interval: 15s
+      retries: 3
+      start_period: 60s
+      test:
+        - CMD
+        - /usr/local/bin/linkorder-health
+        - web
+      timeout: 10s
+    image: ghcr.io/collreview/linkorder-app@sha256:7238e7db8a10a52b77ba538b7a6f6907251c22096461cc8182502110e85725c0
+    init: true
+    mem_limit: ${LINKORDER_MEM_WEB_HOOKS:?}
+    memswap_limit: ${LINKORDER_MEM_WEB_HOOKS:?}
+    networks:
+      front-hooks: null
+    oom_score_adj: 600
+    pids_limit: 128
+    pull_policy: never
+    read_only: true
+    restart: unless-stopped
+    secrets:
+      - source: db_app_webhook
+        target: db_password
+    security_opt:
+      - no-new-privileges:true
+    stop_grace_period: 20s
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+      - /run:size=32m,mode=0755,uid=10006,gid=10000
+    user: 10006:10000
+    volumes:
+      - read_only: true
+        source: pg-socket
+        target: /var/run/postgresql
+        type: volume
+  web-panel:
+    cap_drop:
+      - ALL
+    command:
+      - web-panel
+    depends_on:
+      postgres:
+        condition: service_healthy
+        required: true
+      valkey-cache:
+        condition: service_healthy
+        required: true
+      valkey-core:
+        condition: service_healthy
+        required: true
+    environment:
+      APP_KEY_FILE: /run/secrets/app_key
+      APP_URL: https://${LINKORDER_APP_HOST:?brak nazwy panelu}
+      CHANNELS_ALLEGRO_APP_NAME: ${CHANNELS_ALLEGRO_APP_NAME:-}
+      CHANNELS_ALLEGRO_BRIDGE: ${CHANNELS_ALLEGRO_BRIDGE:-0}
+      CHANNELS_ALLEGRO_INFO_URL: ${CHANNELS_ALLEGRO_INFO_URL:-}
+      CHANNELS_ALLEGRO_SANDBOX: ${CHANNELS_ALLEGRO_SANDBOX:-0}
+      DB_DATABASE: linkorder
+      DB_HOST: /var/run/postgresql
+      DB_PASSWORD_FILE: /run/secrets/db_password
+      DB_USERNAME: app_web
+      LINKORDER_FPM_CHILDREN: ${LINKORDER_FPM_PANEL_CHILDREN:?}
+      LINKORDER_FPM_MEMORY_LIMIT: 256M
+      LINKORDER_FPM_TIMEOUT: 30s
+      LINKORDER_HOOKS_URL: https://${LINKORDER_HOOKS_HOST:?brak nazwy adresu powiadomień}
+      LINKORDER_MAILER_PUBLIC_KEY_FILE: /run/secrets/mailer_public_key
+      LINKORDER_ROLE: web-panel
+      LINKORDER_TOTP_KEY_FILE: /run/secrets/totp_key
+      LINKORDER_VAULT_PUBLIC_KEY_FILE: /run/secrets/vault_public_key
+      LINKORDER_WEBHOOKS_PUBLIC_KEY_FILE: /run/secrets/webhooks_public_key
+      QUEUE_CONNECTION: "null"
+      REDIS_CACHE_HOST: valkey-cache
+      REDIS_HOST: valkey-core
+      REDIS_PASSWORD_FILE: /run/secrets/valkey_password
+      REDIS_PREFIX: 'lo:'
+      REDIS_USERNAME: panel
+    healthcheck:
+      interval: 15s
+      retries: 3
+      start_period: 60s
+      test:
+        - CMD
+        - /usr/local/bin/linkorder-health
+        - web
+      timeout: 10s
+    image: ghcr.io/collreview/linkorder-app@sha256:7238e7db8a10a52b77ba538b7a6f6907251c22096461cc8182502110e85725c0
+    init: true
+    mem_limit: ${LINKORDER_MEM_WEB_PANEL:?}
+    memswap_limit: ${LINKORDER_MEM_WEB_PANEL:?}
+    networks:
+      front: null
+      valkey: null
+    oom_score_adj: 600
+    pids_limit: 256
+    pull_policy: never
+    read_only: true
+    restart: unless-stopped
+    secrets:
+      - source: app_key
+        target: /run/secrets/app_key
+      - source: totp_key
+        target: /run/secrets/totp_key
+      - source: vault_public_key
+        target: /run/secrets/vault_public_key
+      - source: webhooks_public_key
+        target: /run/secrets/webhooks_public_key
+      - source: mailer_public_key
+        target: /run/secrets/mailer_public_key
+      - source: db_app_web
+        target: db_password
+      - source: valkey_panel
+        target: valkey_password
+    security_opt:
+      - no-new-privileges:true
+    stop_grace_period: 35s
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+      - /run:size=32m,mode=0755,uid=10001,gid=10000
+    user: 10001:10000
+    volumes:
+      - read_only: true
+        source: pg-socket
+        target: /var/run/postgresql
+        type: volume
+  webhooks-out:
+    cap_drop:
+      - ALL
+    command:
+      - webhooks-out
+    depends_on:
+      egress-publiczny:
+        condition: service_healthy
+        required: true
+      postgres:
+        condition: service_healthy
+        required: true
+    environment:
+      APP_URL: https://${LINKORDER_APP_HOST:?brak nazwy panelu}
+      DB_DATABASE: linkorder
+      DB_HOST: /var/run/postgresql
+      DB_PASSWORD_FILE: /run/secrets/db_password
+      DB_USERNAME: app_webhooks_out
+      LINKORDER_HOOKS_URL: https://${LINKORDER_HOOKS_HOST:?brak nazwy adresu powiadomień}
+      LINKORDER_ROLE: webhooks-out
+      LINKORDER_WEBHOOKS_PRIVATE_KEY_FILE: /run/secrets/webhooks_private_key
+      PHP_MEMORY_LIMIT: 128M
+      QUEUE_CONNECTION: "null"
+      WEBHOOKS_OUTBOUND_PROXY: http://egress-publiczny:4751
+      WEBHOOKS_OUTBOUND_REQUIRE_PROXY: "true"
+    healthcheck:
+      interval: 30s
+      retries: 3
+      start_period: 60s
+      test:
+        - CMD
+        - /usr/local/bin/linkorder-health
+        - heartbeat
+        - "120"
+      timeout: 5s
+    image: ghcr.io/collreview/linkorder-app@sha256:7238e7db8a10a52b77ba538b7a6f6907251c22096461cc8182502110e85725c0
+    init: true
+    mem_limit: ${LINKORDER_MEM_WEBHOOKS_OUT:?}
+    memswap_limit: ${LINKORDER_MEM_WEBHOOKS_OUT:?}
+    networks:
+      egress-publiczny-wejscie: null
+    oom_score_adj: 600
+    pids_limit: 32
+    pull_policy: never
+    read_only: true
+    restart: unless-stopped
+    secrets:
+      - source: db_app_webhooks_out
+        target: db_password
+      - source: webhooks_private_key
+        target: /run/secrets/webhooks_private_key
+    security_opt:
+      - no-new-privileges:true
+    stop_grace_period: 45s
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+      - /run:size=32m,mode=0755,uid=10012,gid=10000
+    user: 10012:10000
+    volumes:
+      - read_only: true
+        source: pg-socket
+        target: /var/run/postgresql
+        type: volume
+  worker:
+    cap_drop:
+      - ALL
+    command:
+      - worker
+    depends_on:
+      egress:
+        condition: service_healthy
+        required: true
+      postgres:
+        condition: service_healthy
+        required: true
+      valkey-core:
+        condition: service_healthy
+        required: true
+    environment:
+      APP_KEY_FILE: /run/secrets/app_key
+      APP_URL: https://${LINKORDER_APP_HOST:?brak nazwy panelu}
+      CHANNELS_ALLEGRO_APP_NAME: ${CHANNELS_ALLEGRO_APP_NAME:-}
+      CHANNELS_ALLEGRO_BRIDGE: ${CHANNELS_ALLEGRO_BRIDGE:-0}
+      CHANNELS_ALLEGRO_INFO_URL: ${CHANNELS_ALLEGRO_INFO_URL:-}
+      CHANNELS_ALLEGRO_SANDBOX: ${CHANNELS_ALLEGRO_SANDBOX:-0}
+      CHANNELS_OUTBOUND_PROXY: http://egress:4750
+      CHANNELS_OUTBOUND_REQUIRE_PROXY: "true"
+      DB_DATABASE: linkorder
+      DB_HOST: /var/run/postgresql
+      DB_PASSWORD_FILE: /run/secrets/db_password
+      DB_USERNAME: app_worker
+      LINKORDER_HOOKS_URL: https://${LINKORDER_HOOKS_HOST:?brak nazwy adresu powiadomień}
+      LINKORDER_ROLE: worker
+      LINKORDER_VAULT_PRIVATE_KEY_FILE: /run/secrets/vault_private_key
+      LINKORDER_VAULT_PUBLIC_KEY_FILE: /run/secrets/vault_public_key
+      PHP_MEMORY_LIMIT: 256M
+      QUEUE_CONNECTION: "null"
+      REDIS_CACHE_HOST: valkey-cache
+      REDIS_HOST: valkey-core
+      REDIS_PASSWORD_FILE: /run/secrets/valkey_password
+      REDIS_PREFIX: 'lo:'
+      REDIS_USERNAME: worker
+    healthcheck:
+      interval: 30s
+      retries: 3
+      start_period: 60s
+      test:
+        - CMD
+        - /usr/local/bin/linkorder-health
+        - heartbeat
+        - "120"
+      timeout: 5s
+    image: ghcr.io/collreview/linkorder-app@sha256:7238e7db8a10a52b77ba538b7a6f6907251c22096461cc8182502110e85725c0
+    init: true
+    mem_limit: ${LINKORDER_MEM_WORKER:?}
+    memswap_limit: ${LINKORDER_MEM_WORKER:?}
+    networks:
+      egress-wejscie: null
+      valkey: null
+    oom_score_adj: 600
+    pids_limit: 64
+    pull_policy: never
+    read_only: true
+    restart: unless-stopped
+    secrets:
+      - source: app_key
+        target: /run/secrets/app_key
+      - source: vault_public_key
+        target: /run/secrets/vault_public_key
+      - source: vault_private_key
+        target: /run/secrets/vault_private_key
+      - source: db_app_worker
+        target: db_password
+      - source: valkey_worker
+        target: valkey_password
+    security_opt:
+      - no-new-privileges:true
+    stop_grace_period: 180s
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+      - /run:size=32m,mode=0755,uid=10003,gid=10000
+    user: 10003:10000
+    volumes:
+      - read_only: true
+        source: pg-socket
+        target: /var/run/postgresql
+        type: volume
+  worker-bulk:
+    cap_drop:
+      - ALL
+    command:
+      - worker-bulk
+    depends_on:
+      postgres:
+        condition: service_healthy
+        required: true
+      valkey-core:
+        condition: service_healthy
+        required: true
+    environment:
+      APP_KEY_FILE: /run/secrets/app_key
+      APP_URL: https://${LINKORDER_APP_HOST:?brak nazwy panelu}
+      DB_DATABASE: linkorder
+      DB_HOST: /var/run/postgresql
+      DB_PASSWORD_FILE: /run/secrets/db_password
+      DB_USERNAME: app_worker
+      LINKORDER_HOOKS_URL: https://${LINKORDER_HOOKS_HOST:?brak nazwy adresu powiadomień}
+      LINKORDER_ROLE: worker-bulk
+      PHP_MEMORY_LIMIT: 256M
+      QUEUE_CONNECTION: "null"
+      REDIS_CACHE_HOST: valkey-cache
+      REDIS_HOST: valkey-core
+      REDIS_PASSWORD_FILE: /run/secrets/valkey_password
+      REDIS_PREFIX: 'lo:'
+      REDIS_USERNAME: bulk
+    healthcheck:
+      interval: 30s
+      retries: 3
+      start_period: 60s
+      test:
+        - CMD
+        - /usr/local/bin/linkorder-health
+        - heartbeat
+        - "120"
+      timeout: 5s
+    image: ghcr.io/collreview/linkorder-app@sha256:7238e7db8a10a52b77ba538b7a6f6907251c22096461cc8182502110e85725c0
+    init: true
+    mem_limit: ${LINKORDER_MEM_WORKER_BULK:?}
+    memswap_limit: ${LINKORDER_MEM_WORKER_BULK:?}
+    networks:
+      valkey: null
+    oom_score_adj: 600
+    pids_limit: 64
+    pull_policy: never
+    read_only: true
+    restart: unless-stopped
+    secrets:
+      - source: app_key
+        target: /run/secrets/app_key
+      - source: db_app_worker
+        target: db_password
+      - source: valkey_bulk
+        target: valkey_password
+    security_opt:
+      - no-new-privileges:true
+    stop_grace_period: 30s
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+      - /run:size=32m,mode=0755,uid=10007,gid=10000
+    user: 10007:10000
+    volumes:
+      - read_only: true
+        source: pg-socket
+        target: /var/run/postgresql
+        type: volume
+volumes:
+  pg-socket:
+    name: linkorder_pg-socket
+  restore-scratch:
+    name: linkorder_restore-scratch
+  walg-socket:
+    name: linkorder_walg-socket
+x-app-base:
+  cap_drop:
+    - ALL
+  depends_on:
+    postgres:
+      condition: service_healthy
+  image: ghcr.io/collreview/linkorder-app@sha256:7238e7db8a10a52b77ba538b7a6f6907251c22096461cc8182502110e85725c0
+  init: true
+  oom_score_adj: 600
+  pull_policy: never
+  read_only: true
+  restart: unless-stopped
+  security_opt:
+    - no-new-privileges:true
+x-app-env:
+  APP_KEY_FILE: /run/secrets/app_key
+  APP_URL: https://${LINKORDER_APP_HOST:?brak nazwy panelu}
+  DB_DATABASE: linkorder
+  DB_HOST: /var/run/postgresql
+  DB_PASSWORD_FILE: /run/secrets/db_password
+  LINKORDER_HOOKS_URL: https://${LINKORDER_HOOKS_HOST:?brak nazwy adresu powiadomień}
+  QUEUE_CONNECTION: "null"
+  REDIS_CACHE_HOST: valkey-cache
+  REDIS_HOST: valkey-core
+  REDIS_PREFIX: 'lo:'
+x-app-env-isolated:
+  APP_URL: https://${LINKORDER_APP_HOST:?brak nazwy panelu}
+  DB_DATABASE: linkorder
+  DB_HOST: /var/run/postgresql
+  DB_PASSWORD_FILE: /run/secrets/db_password
+  LINKORDER_HOOKS_URL: https://${LINKORDER_HOOKS_HOST:?brak nazwy adresu powiadomień}
+  QUEUE_CONNECTION: "null"
+x-pg-socket:
+  read_only: true
+  source: pg-socket
+  target: /var/run/postgresql
+  type: volume
