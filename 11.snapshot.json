@@ -1,0 +1,22 @@
+{
+	"signatures": [
+		{
+			"keyid": "11758d7232b9a82e3d5038654c3f1091aef802bff6cbfaa426770d2b43df5cd3",
+			"sig": "3046022100d805df444e42f866a64485f74fe36cc78d743af1383ecc5f70a99e54994ef235022100cf3959d375d81e31fbf380f5012174e3209cbeb6fb6083e66600ae31b2987ab9"
+		}
+	],
+	"signed": {
+		"_type": "snapshot",
+		"expires": "2026-11-13T15:21:30Z",
+		"meta": {
+			"releases.json": {
+				"version": 7
+			},
+			"targets.json": {
+				"version": 5
+			}
+		},
+		"spec_version": "1.0.31",
+		"version": 11
+	}
+}
