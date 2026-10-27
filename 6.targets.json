@@ -1,0 +1,74 @@
+{
+	"signatures": [
+		{
+			"keyid": "abb98a03ef2842baeb38e6590b0d52b7e9edce6943c3d12d1db2114d2a744cb1",
+			"sig": "3044022062317b7693bd4bf3a848d7e39cd2a160325d4cd6ab3cbbccf801e098d71b6144022035e2374ad509e9dfc7f50a24c13a819b40a8053f099cf67a6076d11d45da2978"
+		},
+		{
+			"keyid": "b7cf28a5a374cb7db6818ffda181bee067f0457203b409d64c3f6929fb42b043",
+			"sig": "304402203136a1fd629483b731377365d6adef5b0549171a43fdb8f526239df9dc2b5e24022023c9a818f0d53c2c609e5c535ba1de5e889faec56cd6765f7c244e715430117a"
+		}
+	],
+	"signed": {
+		"_type": "targets",
+		"delegations": {
+			"keys": {
+				"356b29c8cc2cfbb126975ce5b283c3ef8ea71c4314006554c7e8913b27cb6079": {
+					"keytype": "ecdsa",
+					"keyval": {
+						"public": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEMg8lLPXgknzihtaMEnLxi1gP0w3Y\nltWZo6PGK3GuMbQeYqReNflzS23rTjnU5IxjIMne72HmI8h17d/AUIQFKg==\n-----END PUBLIC KEY-----\n"
+					},
+					"scheme": "ecdsa-sha2-nistp256"
+				}
+			},
+			"roles": [
+				{
+					"keyids": [
+						"356b29c8cc2cfbb126975ce5b283c3ef8ea71c4314006554c7e8913b27cb6079"
+					],
+					"name": "releases",
+					"paths": [
+						"releases/*/*"
+					],
+					"terminating": true,
+					"threshold": 1
+				}
+			]
+		},
+		"expires": "2027-10-27T12:28:15Z",
+		"spec_version": "1.0.31",
+		"targets": {
+			"installer/0.1.0/linkorder-linux-amd64": {
+				"hashes": {
+					"sha256": "653d8a94a917788267e16a7d1ddd9fff8a755c1d40e55ff5e64658656bb48a54"
+				},
+				"length": 13394044
+			},
+			"installer/0.2.0/linkorder-linux-amd64": {
+				"hashes": {
+					"sha256": "5c2d48f3409948b20657d927cfe59859eb75e17189a16915723db5533434b873"
+				},
+				"length": 13533308
+			},
+			"installer/0.4.0/linkorder-linux-amd64": {
+				"hashes": {
+					"sha256": "defd8805ff4b049e375f167ae6695fabf67bbdaa6b3ba6222e746fb36ed34f41"
+				},
+				"length": 14094460
+			},
+			"installer/0.5.0/linkorder-linux-amd64": {
+				"hashes": {
+					"sha256": "460592a80eaba06ff390fa22f566e844bf7e417e0fb01ef8ca72d7bbc00c2152"
+				},
+				"length": 14168188
+			},
+			"installer/0.6.0/linkorder-linux-amd64": {
+				"hashes": {
+					"sha256": "c64e2b3310fe2da2d6b2b438e42669666a636f070191523a831cab77e8dbcdf9"
+				},
+				"length": 14340220
+			}
+		},
+		"version": 6
+	}
+}
