@@ -1,0 +1,16 @@
+{
+  "schema": "linkorder.propozycja/v1",
+  "subject": "wydanie-0.6.1",
+  "kind": "release",
+  "version": "0.6.1",
+  "git_commit": "2dcbf5c982c4e4e652d32a420b363db56cbfd761",
+  "created_at": "2026-10-28T05:41:08Z",
+  "base": {
+    "root": 1,
+    "targets": 6,
+    "releases": 8
+  },
+  "role": "releases",
+  "meta_version": 9,
+  "payload_sha256": "768392c93b519f57c133c2f6dd6c1f6fb3d7fa303feafa76e0de815448f7393a"
+}
